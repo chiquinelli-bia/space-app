@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import CampoTexto from "../campoTexto";
 
 const HeaderEstilizado = styled.div`
   padding: 60px 0;
   display: flex;
   justify-content: space-between;
-  img {
+  .logo {
     width: 212px;
   }
 `;
@@ -12,7 +13,12 @@ const HeaderEstilizado = styled.div`
 export default function Cabecalho() {
   return (
     <HeaderEstilizado>
-      <img src="../../../public/logo.png" alt="logo do Space-App" />
+      <img
+        className="logo"
+        src="../../../public/logo.png"
+        alt="logo do Space-App"
+      />
+      <CampoTexto />
     </HeaderEstilizado>
   );
 }
