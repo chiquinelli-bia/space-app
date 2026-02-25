@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import CampoTexto from "../campoTexto";
+import CampoTexto from "@/components/campoTexto";
 
 const HeaderEstilizado = styled.div`
   padding: 60px 0;

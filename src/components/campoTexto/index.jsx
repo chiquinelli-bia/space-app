@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import search from "../../assets";
+import search from "@/assets";
 
 const Wrapper = styled.div`
   position: relative;
