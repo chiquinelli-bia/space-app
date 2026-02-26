@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import GlobalStyles from "@/components/globalStyles";
 import Cabecalho from "@/components/cabecalho";
+import BarraLateral from "@/components/barraLateral";
 
 const FundoGradiente = styled.div`
   background: linear-gradient(
@@ -18,6 +19,7 @@ function App() {
     <FundoGradiente>
       <GlobalStyles />
       <Cabecalho />
+      <BarraLateral />
     </FundoGradiente>
   );
 }
