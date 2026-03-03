@@ -35,6 +35,9 @@ hr {
   height: 0; 
   overflow: visible; 
 }
+h4 {
+  font-weight: 400;
+}
 a {
   background-color: transparent;
 }

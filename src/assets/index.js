@@ -12,6 +12,8 @@ import novasInativo from "../../public/icones/novas-inativo.png";
 import surpreendaAtivo from "../../public/icones/surpreenda-me-ativo.png";
 import surpreendaInativo from "../../public/icones/surpreenda-me-inativo.png";
 import banner from "./Banner.png";
+import favOutline from "./favorite_outline.png";
+import expandir from "./open_in_full.png";
 
 export {
   search,
@@ -28,4 +30,6 @@ export {
   surpreendaAtivo,
   surpreendaInativo,
   banner,
+  favOutline,
+  expandir,
 };
