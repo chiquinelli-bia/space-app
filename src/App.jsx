@@ -32,6 +32,9 @@ const MainContainer = styled.main`
 function App() {
   const [fotosDaGaleria] = useState(fotos);
   const [fotoSelecionada, setFotoSelecionada] = useState(null);
+  function aoAlternarFavorito(foto) {
+    console.log(foto);
+  }
 
   return (
     <FundoGradiente>
@@ -45,6 +48,7 @@ function App() {
         <Galeria
           aoFotoSelecionada={(foto) => setFotoSelecionada(foto)}
           fotos={fotosDaGaleria}
+          aoAlternarFavorito={aoAlternarFavorito}
         />
       </AppContainer>
       <ModalZoom

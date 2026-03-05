@@ -39,7 +39,12 @@ const ImagemEstilizada = styled.figure`
   }
 `;
 
-export default function Imagem({ foto, aoZoomSolicitado, expandida = false }) {
+export default function Imagem({
+  foto,
+  aoZoomSolicitado,
+  expandida = false,
+  aoAlternarFavorito,
+}) {
   return (
     <ImagemEstilizada $expandida={expandida}>
       <img src={foto.path} alt={foto.titulo} />
@@ -49,7 +54,10 @@ export default function Imagem({ foto, aoZoomSolicitado, expandida = false }) {
           <h4>{foto.fonte}</h4>
         </div>
         <footer>
-          <button aria-label="Favoritar">
+          <button
+            aria-label="Favoritar"
+            onClick={() => aoAlternarFavorito(foto)}
+          >
             <img src={favOutline} alt="" />
           </button>
           <button aria-label="Expandir" onClick={() => aoZoomSolicitado(foto)}>
