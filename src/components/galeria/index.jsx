@@ -17,7 +17,7 @@ const ListaDeFotos = styled.ul`
   }
 `;
 
-export default function Galeria({ fotos = [] }) {
+export default function Galeria({ fotos = [], aoFotoSelecionada }) {
   return (
     <ConteudoGaleria>
       <Tags />
@@ -25,7 +25,7 @@ export default function Galeria({ fotos = [] }) {
       <ListaDeFotos>
         {fotos.map((foto) => (
           <li key={foto.id}>
-            <Imagem foto={foto} />
+            <Imagem aoZoomSolicitado={aoFotoSelecionada} foto={foto} />
           </li>
         ))}
       </ListaDeFotos>

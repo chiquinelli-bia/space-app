@@ -6,6 +6,7 @@ import Banner from "@/components/banner";
 import Galeria from "@/components/galeria";
 import { useState } from "react";
 import fotos from "../fotos.json";
+import ModalZoom from "@/components/modalZoom";
 
 const FundoGradiente = styled.div`
   background: linear-gradient(
@@ -30,6 +31,7 @@ const MainContainer = styled.main`
 
 function App() {
   const [fotosDaGaleria] = useState(fotos);
+  const [fotoSelecionada, setFotoSelecionada] = useState(null);
 
   return (
     <FundoGradiente>
@@ -40,8 +42,15 @@ function App() {
           <BarraLateral />
           <Banner />
         </MainContainer>
-        <Galeria fotos={fotosDaGaleria} />
+        <Galeria
+          aoFotoSelecionada={(foto) => setFotoSelecionada(foto)}
+          fotos={fotosDaGaleria}
+        />
       </AppContainer>
+      <ModalZoom
+        foto={fotoSelecionada}
+        aoFechar={() => setFotoSelecionada(null)}
+      />
     </FundoGradiente>
   );
 }

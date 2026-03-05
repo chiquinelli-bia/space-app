@@ -2,7 +2,7 @@
 import { favOutline, expandir } from "@/assets";
 import styled from "styled-components";
 const ImagemEstilizada = styled.figure`
-  width: ${(props) => (props.$expandida ? "90%" : "460px")};
+  width: ${(props) => (props.$expandida ? "80vw" : "460px")};
   max-width: 100%;
   margin: 0;
   display: flex;
@@ -39,9 +39,9 @@ const ImagemEstilizada = styled.figure`
   }
 `;
 
-export default function Imagem({ foto }) {
+export default function Imagem({ foto, aoZoomSolicitado, expandida = false }) {
   return (
-    <ImagemEstilizada $expandida={false}>
+    <ImagemEstilizada $expandida={expandida}>
       <img src={foto.path} alt={foto.titulo} />
       <figcaption>
         <div>
@@ -52,7 +52,7 @@ export default function Imagem({ foto }) {
           <button aria-label="Favoritar">
             <img src={favOutline} alt="" />
           </button>
-          <button aria-label="Expandir">
+          <button aria-label="Expandir" onClick={() => aoZoomSolicitado(foto)}>
             <img src={expandir} alt="" />
           </button>
         </footer>
