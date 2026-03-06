@@ -10,7 +10,7 @@ const HeaderEstilizado = styled.div`
   }
 `;
 
-export default function Cabecalho() {
+export default function Cabecalho({ setPesquisa, pesquisa }) {
   return (
     <HeaderEstilizado>
       <img
@@ -18,7 +18,7 @@ export default function Cabecalho() {
         src="../../../public/logo.png"
         alt="logo do Space-App"
       />
-      <CampoTexto />
+      <CampoTexto pesquisa={pesquisa} setPesquisa={setPesquisa} />
     </HeaderEstilizado>
   );
 }

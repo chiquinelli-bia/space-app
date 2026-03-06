@@ -16,6 +16,7 @@ const ListaDeFotos = styled.ul`
   flex-direction: row;
   padding: 0;
   margin: 0;
+  min-width: 907px;
   li {
     max-width: 440px;
   }

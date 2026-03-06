@@ -28,10 +28,14 @@ const Lupa = styled.img`
   height: 38px;
 `;
 
-export default function CampoTexto() {
+export default function CampoTexto({ pesquisa, setPesquisa }) {
   return (
     <Wrapper>
-      <Input />
+      <Input
+        type="search"
+        value={pesquisa}
+        onChange={(e) => setPesquisa(e.target.value)}
+      />
       <Lupa src={search} alt="ícone de lupa" />
     </Wrapper>
   );

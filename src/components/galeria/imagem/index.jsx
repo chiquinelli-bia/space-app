@@ -54,17 +54,22 @@ export default function Imagem({
           <h3>{foto.titulo}</h3>
           <h4>{foto.fonte}</h4>
         </div>
-        <footer>
-          <button
-            aria-label="Favoritar"
-            onClick={() => aoAlternarFavorito(foto)}
-          >
-            <img src={favorito} alt="" />
-          </button>
-          <button aria-label="Expandir" onClick={() => aoZoomSolicitado(foto)}>
-            <img src={expandir} alt="" />
-          </button>
-        </footer>
+        {!expandida && (
+          <footer>
+            <button
+              aria-label="Favoritar"
+              onClick={() => aoAlternarFavorito(foto)}
+            >
+              <img src={favorito} alt="" />
+            </button>
+            <button
+              aria-label="Expandir"
+              onClick={() => aoZoomSolicitado(foto)}
+            >
+              <img src={expandir} alt="" />
+            </button>
+          </footer>
+        )}
       </figcaption>
     </ImagemEstilizada>
   );

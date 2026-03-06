@@ -4,7 +4,7 @@ import Cabecalho from "@/components/cabecalho";
 import BarraLateral from "@/components/barraLateral";
 import Banner from "@/components/banner";
 import Galeria from "@/components/galeria";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import fotos from "../fotos.json";
 import ModalZoom from "@/components/modalZoom";
 
@@ -32,8 +32,15 @@ const MainContainer = styled.main`
 function App() {
   const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos);
   const [fotoSelecionada, setFotoSelecionada] = useState(null);
+  const [pesquisa, setPesquisa] = useState("");
 
   const aoAlternarFavorito = (foto) => {
+    if (foto.id === fotoSelecionada?.id) {
+      setFotoSelecionada({
+        ...fotoSelecionada,
+        favorita: !fotoSelecionada.favorita,
+      });
+    }
     setFotosDaGaleria(
       fotosDaGaleria.map((fotoDaGaleria) => {
         return {
@@ -46,12 +53,20 @@ function App() {
       }),
     );
   };
+  useEffect(() => {
+    console.log(pesquisa);
+    let termo = pesquisa.toLowerCase();
+    let fotosPesquisadas = fotos.filter((fotos) => {
+      return fotos.titulo.toLowerCase().includes(termo);
+    });
+    setFotosDaGaleria(fotosPesquisadas);
+  }, [pesquisa]);
 
   return (
     <FundoGradiente>
       <GlobalStyles />
       <AppContainer>
-        <Cabecalho />
+        <Cabecalho pesquisa={pesquisa} setPesquisa={setPesquisa} />
         <MainContainer>
           <BarraLateral />
           <Banner />
