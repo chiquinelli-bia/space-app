@@ -1,5 +1,5 @@
 // import styled from "styled-components";
-import { favOutline, expandir } from "@/assets";
+import { favoritoAtivo, favoritoInativo, expandir } from "@/assets";
 import styled from "styled-components";
 const ImagemEstilizada = styled.figure`
   width: ${(props) => (props.$expandida ? "80vw" : "460px")};
@@ -45,6 +45,7 @@ export default function Imagem({
   expandida = false,
   aoAlternarFavorito,
 }) {
+  const favorito = foto.favorita ? favoritoAtivo : favoritoInativo;
   return (
     <ImagemEstilizada $expandida={expandida}>
       <img src={foto.path} alt={foto.titulo} />
@@ -58,7 +59,7 @@ export default function Imagem({
             aria-label="Favoritar"
             onClick={() => aoAlternarFavorito(foto)}
           >
-            <img src={favOutline} alt="" />
+            <img src={favorito} alt="" />
           </button>
           <button aria-label="Expandir" onClick={() => aoZoomSolicitado(foto)}>
             <img src={expandir} alt="" />

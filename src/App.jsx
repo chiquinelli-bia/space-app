@@ -30,11 +30,22 @@ const MainContainer = styled.main`
 `;
 
 function App() {
-  const [fotosDaGaleria] = useState(fotos);
+  const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos);
   const [fotoSelecionada, setFotoSelecionada] = useState(null);
-  function aoAlternarFavorito(foto) {
-    console.log(foto);
-  }
+
+  const aoAlternarFavorito = (foto) => {
+    setFotosDaGaleria(
+      fotosDaGaleria.map((fotoDaGaleria) => {
+        return {
+          ...fotoDaGaleria,
+          favorita:
+            fotoDaGaleria.id === foto.id
+              ? !foto.favorita
+              : fotoDaGaleria.favorita,
+        };
+      }),
+    );
+  };
 
   return (
     <FundoGradiente>
