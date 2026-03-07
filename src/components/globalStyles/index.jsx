@@ -14,6 +14,11 @@ const GlobalStyles = createGlobalStyle`
   local('GandhiSansBold'),
   url(${GandhiSansBold});
 }
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 html {
   font-family:GandhiSansRegular;
   line-height: 1.15; 

@@ -40,7 +40,7 @@ export default function Populares({ fotos = [] }) {
           </li>
         ))}
       </ListaPopulares>
-      <ButtonEstilizado> Ver Mais</ButtonEstilizado>
+      <ButtonEstilizado className="disabled"> Ver Mais</ButtonEstilizado>
     </PopularesEstilizados>
   );
 }

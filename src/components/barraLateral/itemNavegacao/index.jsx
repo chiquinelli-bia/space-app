@@ -20,7 +20,7 @@ export default function ItemNavegacao({
   iconeInativo,
 }) {
   return (
-    <ItemEstilizado $ativo={ativo}>
+    <ItemEstilizado $ativo={ativo} className={ativo ? "" : "disabled"}>
       <img src={ativo ? iconeAtivo : iconeInativo} alt="" />
       {children}
     </ItemEstilizado>
