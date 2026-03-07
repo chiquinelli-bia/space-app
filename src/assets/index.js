@@ -11,6 +11,9 @@ import novasAtivo from "../../public/icones/novas-ativo.png";
 import novasInativo from "../../public/icones/novas-inativo.png";
 import surpreendaAtivo from "../../public/icones/surpreenda-me-ativo.png";
 import surpreendaInativo from "../../public/icones/surpreenda-me-inativo.png";
+import facebook from "../../public/icones/facebook.png";
+import instagram from "../../public/icones/instagram.png";
+import twitter from "../../public/icones/twitter.png";
 import banner from "./Banner.png";
 import expandir from "./open_in_full.png";
 
@@ -30,4 +33,7 @@ export {
   surpreendaInativo,
   banner,
   expandir,
+  facebook,
+  twitter,
+  instagram,
 };

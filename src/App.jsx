@@ -7,6 +7,7 @@ import Galeria from "@/components/galeria";
 import { useEffect, useState } from "react";
 import fotos from "../fotos.json";
 import ModalZoom from "@/components/modalZoom";
+import Footer from "@/components/footer";
 
 const FundoGradiente = styled.div`
   background: linear-gradient(
@@ -89,6 +90,7 @@ function App() {
           handleTag={handleTag}
         />
       </AppContainer>
+      <Footer></Footer>
       <ModalZoom
         foto={fotoSelecionada}
         aoFechar={() => setFotoSelecionada(null)}
