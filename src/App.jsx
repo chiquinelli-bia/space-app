@@ -53,6 +53,17 @@ function App() {
       }),
     );
   };
+  const handleTag = (event) => {
+    const buttonId = event.target.id;
+    let fotosPesquisadas = fotos.filter((fotos) => {
+      if (Number(buttonId) === 0) {
+        console.log("foi");
+        return fotosDaGaleria;
+      }
+      return fotos.tagId === Number(buttonId);
+    });
+    setFotosDaGaleria(fotosPesquisadas);
+  };
   useEffect(() => {
     console.log(pesquisa);
     let termo = pesquisa.toLowerCase();
@@ -75,6 +86,7 @@ function App() {
           aoFotoSelecionada={(foto) => setFotoSelecionada(foto)}
           fotos={fotosDaGaleria}
           aoAlternarFavorito={aoAlternarFavorito}
+          handleTag={handleTag}
         />
       </AppContainer>
       <ModalZoom

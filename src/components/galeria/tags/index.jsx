@@ -47,13 +47,15 @@ const ButtonEstilizado = styled.button`
   }
 `;
 
-export default function Tags() {
+export default function Tags({ handleTag }) {
   return (
     <>
       <TagsEstilizadas>
         <PEstilizado>Busque por tags:</PEstilizado>
         {tags.map((tag) => (
-          <ButtonEstilizado key={tag.id}>{tag.titulo}</ButtonEstilizado>
+          <ButtonEstilizado onClick={handleTag} id={tag.id} key={tag.id}>
+            {tag.titulo}
+          </ButtonEstilizado>
         ))}
       </TagsEstilizadas>
     </>

@@ -31,10 +31,11 @@ export default function Galeria({
   fotos = [],
   aoFotoSelecionada,
   aoAlternarFavorito,
+  handleTag,
 }) {
   return (
     <ConteudoGaleria>
-      <Tags />
+      <Tags handleTag={handleTag} />
       <Titulo>Navegue Pela Galeria</Titulo>
       <ContainerMain>
         <ListaDeFotos>
