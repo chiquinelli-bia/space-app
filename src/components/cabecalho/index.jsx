@@ -8,6 +8,11 @@ const HeaderEstilizado = styled.div`
   .logo {
     width: 212px;
   }
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
 `;
 
 export default function Cabecalho({ setPesquisa, pesquisa }) {
