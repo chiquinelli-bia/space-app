@@ -18,6 +18,43 @@ const ListaEstilizada = styled.ul`
   padding: 0;
   margin: 0;
   width: 212px;
+  @media screen and (max-width: 700px) {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 24px;
+    details[open] & {
+      max-height: 500px;
+      opacity: 1;
+    }
+  }
+`;
+const Summary = styled.summary`
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 30px;
+  color: #7b78e5;
+  font-family: GandhiSansBold;
+  text-align: center;
+  width: 212px;
+  display: none;
+  cursor: pointer;
+  @media screen and (max-width: 700px) {
+    display: list-item;
+    width: 100%;
+  }
+  &::-webkit-details-marker {
+    display: block;
+  }
 `;
 
 export default function BarraLateral() {
@@ -60,20 +97,23 @@ export default function BarraLateral() {
   ];
   return (
     <aside>
-      <nav>
-        <ListaEstilizada>
-          {itensBarraLateral.map((item) => (
-            <ItemNavegacao
-              key={item.key}
-              ativo={item.ativo}
-              iconeAtivo={item.iconeAtivo}
-              iconeInativo={item.iconeInativo}
-            >
-              {item.children}
-            </ItemNavegacao>
-          ))}
-        </ListaEstilizada>
-      </nav>
+      <details open>
+        <Summary>Menu</Summary>
+        <nav>
+          <ListaEstilizada>
+            {itensBarraLateral.map((item) => (
+              <ItemNavegacao
+                key={item.key}
+                ativo={item.ativo}
+                iconeAtivo={item.iconeAtivo}
+                iconeInativo={item.iconeInativo}
+              >
+                {item.children}
+              </ItemNavegacao>
+            ))}
+          </ListaEstilizada>
+        </nav>
+      </details>
     </aside>
   );
 }
