@@ -7,6 +7,9 @@ import fotosPopulares from "@/../fotos-populares.json";
 
 const ConteudoGaleria = styled.div`
   margin: 2em 0 2em 297px;
+  @media screen and (max-width: 700px) {
+    margin: 2em 2em;
+  }
 `;
 const ListaDeFotos = styled.ul`
   list-style-type: none;

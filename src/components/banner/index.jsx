@@ -8,6 +8,9 @@ const Wrapper = styled.div`
   margin: 0;
   background: url(${banner}) no-repeat right center / cover;
   border-radius: 20px;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 `;
 
 const TituloEstilizado = styled.h1`

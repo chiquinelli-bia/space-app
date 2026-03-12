@@ -28,6 +28,10 @@ const MainContainer = styled.main`
   display: flex;
   gap: 24px;
   justify-content: space-between;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    margin: 0 24px;
+  }
 `;
 
 function App() {
