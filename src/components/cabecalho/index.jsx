@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import CampoTexto from "@/components/campoTexto";
 
-const HeaderEstilizado = styled.div`
+const HeaderEstilizado = styled.header`
   padding: 60px 0;
   display: flex;
   justify-content: space-between;
@@ -12,6 +12,7 @@ const HeaderEstilizado = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    width: 100%;
   }
 `;
 
