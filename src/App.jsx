@@ -70,7 +70,6 @@ function App() {
     setFotosDaGaleria(fotosPesquisadas);
   };
   useEffect(() => {
-    console.log(pesquisa);
     let termo = pesquisa.toLowerCase();
     let fotosPesquisadas = fotos.filter((fotos) => {
       return fotos.titulo.toLowerCase().includes(termo);

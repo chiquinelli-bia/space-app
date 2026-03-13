@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import CampoTexto from "@/components/campoTexto";
+import { logo } from "@/assets/index.js";
 
 const HeaderEstilizado = styled.header`
   padding: 60px 0;
@@ -19,11 +20,7 @@ const HeaderEstilizado = styled.header`
 export default function Cabecalho({ setPesquisa, pesquisa }) {
   return (
     <HeaderEstilizado>
-      <img
-        className="logo"
-        src="../../../public/logo.png"
-        alt="logo do Space-App"
-      />
+      <img className="logo" src={logo} alt="logo do Space-App" />
       <CampoTexto pesquisa={pesquisa} setPesquisa={setPesquisa} />
     </HeaderEstilizado>
   );

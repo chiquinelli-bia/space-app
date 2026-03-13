@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   border-radius: 20px;
   @media screen and (max-width: 700px) {
     width: 100%;
+    min-height: 272px;
   }
 `;
 
@@ -24,6 +25,11 @@ const TituloEstilizado = styled.h1`
   color: #ffffff;
   transform: translateY(-50%);
   max-width: 300px;
+  @media screen and (max-width: 700px) {
+    left: 45px;
+    font-size: 32px;
+    line-height: 42px;
+  }
 `;
 
 export default function Banner() {
