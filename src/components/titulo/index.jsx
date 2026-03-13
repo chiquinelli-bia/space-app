@@ -4,6 +4,9 @@ const Titulo = styled.h2`
   color: #7b78e6;
   font-size: 32px;
   text-align: ${(props) => (props.$alinhamento ? props.$alinhamento : "left")};
+  @media screen and (max-width: 768px) {
+    font-size: 26px;
+  }
 `;
 
 export default Titulo;

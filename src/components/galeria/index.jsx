@@ -8,7 +8,7 @@ import fotosPopulares from "@/../fotos-populares.json";
 const ConteudoGaleria = styled.div`
   margin: 2em 0 2em 297px;
   @media screen and (max-width: 700px) {
-    margin: 2em 2em;
+    margin: 2em 1em;
   }
 `;
 const ListaDeFotos = styled.ul`
@@ -23,11 +23,20 @@ const ListaDeFotos = styled.ul`
   li {
     max-width: 440px;
   }
+  @media screen and (max-width: 700px) {
+    min-width: auto;
+    li {
+      width: 241px;
+    }
+  }
 `;
 const ContainerMain = styled.div`
   display: flex;
   flex-direction: row;
   gap: 24px;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 export default function Galeria({

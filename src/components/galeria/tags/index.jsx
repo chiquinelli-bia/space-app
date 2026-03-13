@@ -27,10 +27,14 @@ const PEstilizado = styled.p`
   color: #d9d9d9;
   font-size: 24px;
   margin: 1em 2em 1em 0;
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 const TagsEstilizadas = styled.div`
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
 `;
 const ButtonEstilizado = styled.button`
   padding: 10px 8px;
@@ -45,13 +49,17 @@ const ButtonEstilizado = styled.button`
   &:hover {
     border-color: #c98cf1;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    padding: 14px 10px;
+  }
 `;
 
 export default function Tags({ handleTag }) {
   return (
     <>
+      <PEstilizado>Busque por tags:</PEstilizado>
       <TagsEstilizadas>
-        <PEstilizado>Busque por tags:</PEstilizado>
         {tags.map((tag) => (
           <ButtonEstilizado onClick={handleTag} id={tag.id} key={tag.id}>
             {tag.titulo}

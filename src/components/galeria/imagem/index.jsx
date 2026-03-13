@@ -36,6 +36,14 @@ const ImagemEstilizada = styled.figure`
       border: none;
       background: transparent;
     }
+    @media screen and (max-width: 700px) {
+      padding: 12px 16px;
+      gap: 35px;
+      h3,
+      h4 {
+        font-size: 14px;
+      }
+    }
   }
 `;
 

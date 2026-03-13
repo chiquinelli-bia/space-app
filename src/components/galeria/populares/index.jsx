@@ -4,6 +4,10 @@ import styled from "styled-components";
 const PopularesEstilizados = styled.section`
   top: -92px;
   position: relative;
+  @media screen and (max-width: 700px) {
+    top: auto;
+    text-align: center;
+  }
 `;
 const ListaPopulares = styled.ul`
   display: flex;
@@ -14,6 +18,13 @@ const ListaPopulares = styled.ul`
   padding: 0;
   li img {
     border-radius: 16px;
+  }
+  @media screen and (max-width: 700px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    li img {
+      width: 152px;
+    }
   }
 `;
 const ButtonEstilizado = styled.button`
@@ -27,6 +38,12 @@ const ButtonEstilizado = styled.button`
   width: 100%;
   padding: 16px 0;
   margin: 24px 0 0 0;
+
+  @media screen and (max-width: 700px) {
+    width: auto;
+    padding: 14px 72px;
+    font-size: 18px;
+  }
 `;
 
 export default function Populares({ fotos = [] }) {
