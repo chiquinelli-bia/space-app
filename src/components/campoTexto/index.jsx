@@ -25,6 +25,8 @@ const Input = styled.input`
   @media screen and (max-width: 700px) {
     width: 100%;
     margin: 0;
+    height: 46px;
+    font-size: 18px;
   }
 `;
 const Lupa = styled.img`
@@ -33,6 +35,10 @@ const Lupa = styled.img`
   right: 10px;
   width: 38px;
   height: 38px;
+
+  @media screen and (max-width: 700px) {
+    top: 3px;
+  }
 `;
 
 export default function CampoTexto({ pesquisa, setPesquisa }) {
