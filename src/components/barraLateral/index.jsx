@@ -51,6 +51,7 @@ const Summary = styled.summary`
   @media screen and (max-width: 700px) {
     display: list-item;
     width: 100%;
+    font-size: 20px;
   }
   &::-webkit-details-marker {
     display: block;
