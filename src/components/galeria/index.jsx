@@ -30,7 +30,7 @@ const ListaDeFotos = styled.ul`
     }
   }
   @media screen and (max-width: 430px) {
-    gap: 12px;
+    gap: 8px;
     li {
       max-width: 160px;
     }

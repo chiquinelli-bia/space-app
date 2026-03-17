@@ -27,6 +27,7 @@ const ListaPopulares = styled.ul`
     }
   }
   @media screen and (max-width: 430px) {
+    gap: 16px;
     li img {
       width: 96px;
     }
