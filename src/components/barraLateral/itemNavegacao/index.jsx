@@ -11,6 +11,14 @@ const ItemEstilizado = styled.li`
   display: flex;
   align-items: center;
   gap: 22px;
+  @media screen and (max-width: 700px) {
+    gap: 12px;
+    font-size: 18px;
+    margin-bottom: 12px;
+    img {
+      width: 26px;
+    }
+  }
 `;
 
 export default function ItemNavegacao({

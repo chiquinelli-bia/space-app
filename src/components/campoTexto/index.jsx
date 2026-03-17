@@ -4,6 +4,9 @@ import { search } from "@/assets";
 const Wrapper = styled.div`
   position: relative;
   display: inline-block;
+  @media screen and (max-width: 700px) {
+    width: 82%;
+  }
 `;
 
 const Input = styled.input`
@@ -19,6 +22,12 @@ const Input = styled.input`
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    margin: 0;
+    height: 46px;
+    font-size: 18px;
+  }
 `;
 const Lupa = styled.img`
   position: absolute;
@@ -26,6 +35,10 @@ const Lupa = styled.img`
   right: 10px;
   width: 38px;
   height: 38px;
+
+  @media screen and (max-width: 700px) {
+    top: 3px;
+  }
 `;
 
 export default function CampoTexto({ pesquisa, setPesquisa }) {

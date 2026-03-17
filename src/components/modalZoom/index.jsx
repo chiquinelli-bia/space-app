@@ -15,6 +15,12 @@ const DialogEstilizado = styled.dialog`
   top: 294px;
   border: none;
   background: transparent;
+  @media screen and (max-width: 700px) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 const ButtonEstilizado = styled.button`
   border: none;
@@ -24,7 +30,6 @@ const ButtonEstilizado = styled.button`
   right: 30px;
   font-size: 45px;
 `;
-
 export default function ModalZoom({ foto, aoFechar }) {
   return (
     <>
