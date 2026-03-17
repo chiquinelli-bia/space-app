@@ -44,6 +44,23 @@ const ImagemEstilizada = styled.figure`
         font-size: 14px;
       }
     }
+    @media screen and (max-width: 430px) {
+      padding: 8px 10px;
+      gap: 12px;
+      figcaption div {
+        width: 100px;
+      }
+      h3 {
+        font-size: 12px;
+      }
+      h4 {
+        font-size: 10px;
+        width: 80%;
+      }
+      button img {
+        width: 16px;
+      }
+    }
   }
 `;
 

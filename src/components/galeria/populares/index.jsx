@@ -26,6 +26,11 @@ const ListaPopulares = styled.ul`
       width: 152px;
     }
   }
+  @media screen and (max-width: 430px) {
+    li img {
+      width: 96px;
+    }
+  }
 `;
 const ButtonEstilizado = styled.button`
   color: #ffffff;

@@ -29,6 +29,12 @@ const ListaDeFotos = styled.ul`
       width: 241px;
     }
   }
+  @media screen and (max-width: 430px) {
+    gap: 12px;
+    li {
+      max-width: 160px;
+    }
+  }
 `;
 const ContainerMain = styled.div`
   display: flex;
