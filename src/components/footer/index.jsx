@@ -9,6 +9,9 @@ const FooterEstilizado = styled.footer`
   max-width: 100vw;
   padding: 30px 24px;
   align-items: center;
+  @media screen and (max-width: 430px) {
+    padding: 12px 16px;
+  }
 `;
 const Icones = styled.div`
   display: flex;
@@ -16,6 +19,9 @@ const Icones = styled.div`
   gap: 40px;
   a {
     text-decoration: none;
+  }
+  @media screen and (max-width: 430px) {
+    gap: 8px;
   }
 `;
 const PEstilizado = styled.p`

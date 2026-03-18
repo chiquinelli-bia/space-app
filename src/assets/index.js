@@ -16,6 +16,7 @@ import instagram from "../../public/icones/instagram.png";
 import twitter from "../../public/icones/twitter.png";
 import banner from "./Banner.png";
 import expandir from "./open_in_full.png";
+import logo from "../../public/logo.png";
 
 export {
   search,
@@ -36,4 +37,5 @@ export {
   facebook,
   twitter,
   instagram,
+  logo,
 };
